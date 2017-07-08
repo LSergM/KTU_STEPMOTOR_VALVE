@@ -51,8 +51,10 @@ void main( void )
       if (steps_drv && (delstart >= 100))
       {
         if (    !(Test_IN_0.fin & (1 << END_STOP)) ) 
-//            &&   (D_pc.ModBUS_r_reg[DRV_STATE] & (1 << DRV_DIR)) )
+            &&   (D_pc.ModBUS_r_reg[DRV_STATE] & (1 << DRV_DIR)) )
         {
+		  //D_pc.ModBUS_r_reg[DRV_STATE] &= ~(1 << DRV_DIR))
+		  //	SET_DRV_DIR_REV;				 
           steps_drv = 0;
           position  = 0;
         }
@@ -113,9 +115,12 @@ void main( void )
     din=~Test_IN_0.fin&0x0F;    
       //data=(data>>2&1)+(data>>3&0x0E);
 //    D_pc.ModBUS_rw_reg[FLAGS]
-      if(D_pc.ModBUS_rw_reg[FLAGS]&(1<<CTRL_SOURS))  pwm=DELTA*din;//*((unsigned char*)&D_pc.ModBUS_rw_reg+data);
-      else  pwm=D_pc.ModBUS_rw_reg[PWM_DATA];
-      if(pwm>ANGLE_MAX) pwm=0;
+      if(D_pc.ModBUS_rw_reg[FLAGS]&(1<<CTRL_SOURS))  
+			pwm=DELTA*din;//*((unsigned char*)&D_pc.ModBUS_rw_reg+data);
+      else  
+			pwm=D_pc.ModBUS_rw_reg[PWM_DATA];
+      if(pwm>ANGLE_MAX) 
+			pwm=0;
       D_pc.ModBUS_rw_reg[PWM_CALC]=pwm;
       OCR1A=MAX_PWM-pwm*CAL;     
   }  
