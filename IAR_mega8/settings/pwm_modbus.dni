@@ -1,0 +1,50 @@
+[Stack]
+FillEnabled=1
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[DebugChecksum]
+Checksum=-53791852
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[CallStackLog]
+Enabled=0
+[DriverProfiling]
+Enabled=0
+Mode=1
+Graph=0
+Symbiont=0
+Exclusions=
+[struct_types]
+Fmt0=struct Data_IN-fin	1	0
+[array_types]
+Fmt0=unsigned char[11]	3	0
+[watch_formats]
+Fmt0={W}0:pwm	3	0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[Breakpoints]
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\..\..\..\WORK\PRJ_HOME\HOME_0004_PWM_MODEL\IAR\main.c}.109.2" 0 0 0 0 "" 0 ""
+Bp1=_ "STD_CODE" "{$PROJ_DIR$\..\..\..\WORK\PRJ_HOME\HOME_0004_PWM_MODEL\IAR\main.c}.73.2" 0 0 0 0 "" 0 ""
+Bp2=_ "STD_CODE" "{$PROJ_DIR$\..\..\..\WORK\PRJ_HOME\HOME_0004_PWM_MODEL\IAR\main.c}.93.2" 0 0 0 0 "" 0 ""
+Count=3
+[Aliases]
+A0=_ "E:\work\PRJ_HOME\HOME_0004_PWM_MODEL\IAR\eemem.c" ""
+A1=_ "E:\work\PRJ_HOME\HOME_0004_PWM_MODEL\IAR\main.c" ""
+Count=2
+SuppressDialog=0
+[Trace1]
+Enabled=0
+ShowSource=1
